@@ -1,0 +1,336 @@
+body{
+	font-family: Tahoma;
+	background: #fff;
+	font-size: 14px;
+	padding: 20px;
+	margin: 0;
+	overflow-y:scroll;
+	color: #333;
+}
+
+h1{
+	margin: 0 0 20px;
+}
+
+.wrapper{
+	max-width: 800px;
+	min-width: 600px;
+	margin: 0 auto;
+	background: #eee;
+	padding: 20px;
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inner{
+	overflow: hidden;
+	position: relative;
+}
+
+.inner .item{
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.inner .item .title{
+	padding: 8px 10px;
+	display: block;
+	font-weight: bold;
+	color: #333;
+	font-size: 16px;
+	margin-right: 4px;
+	text-decoration: none;
+	padding-right: 70px;
+	-webkit-transition: background 0.25s;
+	transition: background 0.25s;	
+}
+
+.inner .item .title:hover{
+	background: #ddd;
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inner .item .date{
+	display: block;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.inner .item .manage{
+	position: absolute;
+	right: 11px;
+	top: 11px;
+	font-size: 0;
+}
+
+.paginate{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 0;
+}
+
+.paginate a,
+.paginate span{
+	font-weight: bold;
+	display: inline-block;
+	margin: 3px;
+	text-decoration: none;
+	color: #333;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+	-webkit-transition: background 0.25s;
+	transition: background 0.25s;
+	position: relative;
+}
+
+.paginate span{
+	opacity: 0.25;	
+}
+
+.paginate a:hover,
+.paginate span.current{
+	opacity: 1;
+	display: inline-block;
+	background: #ddd;
+	color: #333;
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.paginate .first,
+.paginate .prev,
+.paginate .next,
+.paginate .last{
+	text-indent: -9999px;
+}
+
+.paginate .first:before,
+.paginate .prev:before,
+.paginate .next:before,
+.paginate .last:before{
+	content: '';
+	display: block;
+	background-image: url(../images/sprite.png);
+	width:24px;
+	height: 24px;
+	position: absolute;
+	left: 3px;
+	top: 3px;	
+}
+
+.paginate .first:before{
+	background-position: 24px 48px;
+}
+.paginate .prev:before{
+	background-position: 0px 48px;
+}
+.paginate .next:before{
+	background-position: 0px 24px;
+}
+.paginate .last:before{
+	background-position: 24px 24px;
+}
+
+
+.but{
+	display: inline-block;
+	margin-left: 5px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;	
+	position: relative;
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	-webkit-transition: background 0.25s;
+	transition: background 0.25s;	
+}
+
+.but:hover{
+	background: #ddd;
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);	
+}
+
+.but.edit,
+.but.delete{
+	width: 10px;
+}
+
+.but.edit:before,
+.but.delete:before,
+.but.add:before,
+.but.back:before,
+.but.save:before,
+.but.undo:before{
+	content: '';
+	display: block;
+	background-image: url(../images/sprite.png);
+	width:24px;
+	height: 24px;
+	position: absolute;
+	left: 3px;
+	top: 3px;
+}
+
+.but.delete:before{
+	background-position: 24px -24px;
+}
+
+.inner h1{
+	margin-right: 100px;
+}
+
+.but.add{
+	padding-left: 34px;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
+
+.but.add:before{
+	background-position: 24px 0;	
+}
+
+.content .manage{
+	position: absolute;
+	right: 4px;
+	top: 4px;	
+}
+
+.content .date{
+	display: block;
+	font-size: 14px;	
+	font-weight: normal;
+	color: #777;
+}
+
+.content .keywords{
+	margin-bottom: 10px;
+}
+
+.btnWrapper{
+	text-align: center;
+	margin-top: 20px;
+	padding-bottom: 4px;
+}
+
+.but.back{
+	padding-left: 28px;
+	cursor: pointer;
+	margin: 0;
+}
+
+.but.back:before{
+	background-position: 24px 48px;
+}
+
+.saveForm{
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.saveForm input,
+.saveForm textarea{
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-family: Tahoma;
+}
+
+.saveForm textarea{
+	height: 200px;
+	resize: none;
+}
+
+button{
+	outline: none;
+	border:none;
+	background: none;
+	margin-bottom: 4px;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.placeholder{
+	position: relative;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	padding: 10px 5px 5px;
+}
+
+.placeholder label{
+	position: absolute;
+	color:#777;
+	top: 7px;
+	left: 5px;	
+	-webkit-transition: top 0.25s, font-size 0.25s;
+	transition: top 0.25s, font-size 0.25s;		
+}
+
+.placeholder.focused label{
+	background: #eee;
+	font-size: 12px;
+	top: -8px;		
+}
+
+.placeholder.validate.error{
+	border: 1px solid #a00;
+}
+
+.placeholder.validate.error label{
+	color: #a00;
+}
+
+.but.save,
+.but.undo{
+	padding-left: 34px;
+	cursor: pointer;
+}
+
+.but.save:before{
+	background-position: 0px -24px;
+}
+
+.but.undo:before{
+	background-position: 24px -24px;
+}
+
+.errorMessage{
+	color: #a00;
+	font-weight: bold;
+	margin-bottom: 15px;
+	margin-top: -15px;
+	font-size: 12px;
+}
+
+.inner .body{
+	white-space: pre-line;
+}
+
+.popups{
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	padding: 10px;
+	background: #eee;
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);	
+}
+
+#popup{
+	width: 220px;
+	margin:-50px 0 0 -120px;
+}
+
+#popup .buttons{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.errorContent{
+	white-space: pre-line;
+}
